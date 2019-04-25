@@ -1,5 +1,5 @@
 <?php
-    $to = 'divyaratra1999@gmail.com';
+    $to = 'navkiraneduindia.com';
     $name = $_POST["fname"];
     $type = $_POST["type"];
     $from = $_POST["email"];
