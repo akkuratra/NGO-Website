@@ -6,7 +6,7 @@
 		<!-- Favicon-->
 		<link rel="shortcut icon" href="img/fav.png">
 		<!-- Author Meta -->
-		<meta name="author" content="Colorlib">
+		<meta name="author" content="Divya Ratra">
 		<!-- Meta Description -->
 		<meta name="description" content="">
 		<!-- Meta Keyword -->
@@ -21,12 +21,13 @@
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 		<!-- Site Title -->
 		<title>Navkiran Education & Welfare Society </title>
-
+        <link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
+        <link href="http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Alegreya:700" rel="stylesheet" type="text/css" />
 		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 			<!--
 			CSS
 			============================================= -->
-			<link rel="stylesheet" href="css/linearicons.css">=
+			<link rel="stylesheet" href="css/linearicons.css">
 			<link rel="stylesheet" href="css/font-awesome.min.css">
 			<link rel="stylesheet" href="css/magnific-popup.css">
 			<link rel="stylesheet" href="css/nice-select.css">
@@ -35,13 +36,28 @@
 			<link rel="stylesheet" href="css/main.css">
 			
 			        <meta charset="utf-8">
-                   <meta http-equiv="X-UA-Compatible" content="IE=edge">
                    <meta name="viewport" content="width=device-width, initial-scale=1">
-                   <title>Example of Bootstrap 3 Carousel</title>
                    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
                    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+                   <script>
+window.onscroll = function() {myFunction()};
+
+var header = document.getElementById("myHeader");
+var sticky = header.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+</script>
 			<style type="text/css">
+			html {
+  scroll-behavior: smooth;
+}
              .carousel{
                 background: #2f4357;
                 margin-top: 0spx;
@@ -55,42 +71,82 @@
              .bs-example{
 	             margin: 20px;
                  }
+    .header {
+  padding: 10px 16px;
+  background: #555;
+  color: #f1f1f1;
+}
+     .content {
+  padding: 16px;
+}
+
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}        
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  overflow: hidden;
+  background-color: #f5ab35;
+  position: none;
+  top: 0;
+  width: 100%;
+  border:5px;
+  font-weight:bold;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+.list {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 18px 18px;
+  text-decoration: none;
+}
+#navleft {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 18px 18px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color:#292f40;
+}
 </style>
 		</head>
 		<body>
-			<header class="default-header"  style="background-color:orange">
-				<div class="container">
-					<div class="header-wrap">
-						<div class="header-top d-flex justify-content-between align-items-center">
-							<div class="logo">
-								<img src="img/Picture1.PNG" height="40px" width="40px" >             
-								 Navkiran Education & Welfare Society  
-							</div>
-							<div class="main-menubar d-flex align-items-center">
-								<nav class="hide">
-									<a href="#home">Home</a>
-									<a href="indexGallery.html">Gallery</a>
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Upcoming Events
-									<span class="caret"></span></a>
-									<ul class="dropdown-menu">
-									<li><a href="#">Sports</a></li>
-									<li><a href="#">Arts</a></li>
-									<li><a href="#">Health Camp</a></li>
-									<li><a href="#">Festival Celebration</a></li>
-									</ul>
-									<a href="#about">About</a>
-									<a href="#contact">Contact Us</a>
-								</nav>
-								<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
+		
+			<div class="header" id="myheader">
+<ul>
+<li class="list"><a href="#contact">CONTACT US </a></li>
+<li class="list"><a href="#about">ABOUT US </a></li>
+<li class="list"><a href="events.html">EVENTS </a> </li>
+<li class="list"><a href="indexGallery.html">GALLERY </a> </li>
+<li class="list"><a class="active" href="#home">HOME </a></li>
+<li style="float:left" id="navleft"><img src="img\picture1.png" height="25" width="45" style="padding-left:10px;"/></li>
+<li style="float:left" id="navleft"><h4 style="font-family:'Alegreya',serif;">NAVKIRAN EDUCATION AND WELFARE SOCIETY</h4></li>
+
+</ul>
+</div>
 			<!-- End Header Area -->
 	
 			<!-- start banner Area -->
-			<section class="banner-area relative" id="home">
+			<section class="banner-area relative" id="home" >
 				<div class="overlay overlay-bg"></div>
 				<div class="container">
 						<div class="row fullscreen align-items-center justify-content-start" style="height: 915px;">
@@ -99,7 +155,7 @@
 									Your Support <br>
 									Will Build Our Future
 								</h1>
-								<a href="#donate" class="head-btn btn text-uppercase">Donate Now</a>
+								<a href="#donate" class="head-btn btn text-uppercase" style="font-family: 'Alegreya', serif; color:#292f40;">Donate Now</a>
 							</div>
 						</div>
 				</div>
@@ -108,9 +164,11 @@
 
 			<!-- Start callto Area -->
 				<section class="callto-area relative">
-					<div class="container">
-						<div class="row d-flex callto-wrap justify-content-between pt-40 pb-40">
-							<h3 class="text-white">An Initiatives of Housewives</h3>
+					<div class="container" style="border: 1px double #f5ab35;
+outline: 4px solid #292f40;
+outline-offset: -13px;">
+						<div class="row d-flex callto-wrap justify-content-between pt-30 pb-30">
+							<h2 style=" font-family: 'Alegreya', serif; color:#292f40;">An Initiative of Housewives</h2>
 						</div>
 					</div>
 				</section>
@@ -119,11 +177,12 @@
 
 			<!-- Start project Area -->
 			<section class="project-area section-gap" id="about">
+			    <br><br><br>
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="col-md-8 pb-80 header-text">
 						
-							<h1 >Education is the movement from darkness to light</h1>
+							<h1 style="font-family:'dancing script',sans serif; color:#292f40" >Education is the movement from darkness to light</h1>
 							<p align="justify">
 								Education is the best weapon to defeat the evils that prevail in the society. With this belief, Navkiran started
   with a humble beginning of tutoring 4 kids from underprivileged society in 2011. Understanding the needs and importance for these kids
@@ -132,15 +191,12 @@
   into mainstream and make a better  society which has opportunities for all.
 							</p>
 						</div>
-						</div>
-						</div>
-						</div>
-						</div>
-						
-						
-						
-						
-						<div class="container">
+					</div>
+				</div>
+			</section>
+						<div class="container" style="background-color:#292f40;">
+						   <div class="col-lg-8 col-md-12 about-left no-padding">
+						      
   
   <div id="myCarousel" class="carousel slide" data-ride="carousel">
     <!-- Indicators -->
@@ -148,20 +204,24 @@
       <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
       <li data-target="#myCarousel" data-slide-to="1"></li>
       <li data-target="#myCarousel" data-slide-to="2"></li>
+      <li data-target="#myCarousel" data-slide-to="3"></li>
     </ol>
 
     <!-- Wrapper for slides -->
-    <div class="carousel-inner">
+    <div class="carousel-inner" role="listbox" style=" width:100%; height: 400px !important;">
       <div class="item active">
-        <img src="img/motto.JPG" alt="Los Angeles" style=" height:800%;width:100%;" >
+        <img src="img/republic.jpg" alt="image" style=" height:800%;width:100%;" >
       </div>
 
       <div class="item">
-          <img src="img/education.JPG" alt="Chicago"  style="width:100%;" ><div class="carousel-caption"><h3>"Education is not for life , education itself is life."</h3></div>
+          <img src="img/education.JPG" alt="image"  style="width:100%;" >
       </div>
     
       <div class="item">
-        <img src="img/education1.JPG" alt="New york"   style="width:100%;" ><div class="carousel-caption"><h3>"Education is the passport to the future, for tomorrow belongs to who prepare for it today"</h3></div>
+        <img src="img/education1.JPG" alt="image"   style="width:100%;" >
+      </div>
+       <div class="item">
+          <img src="photos/summer uniform/friendship.jpg" alt="image"  style="width:100%;" >
       </div>
     </div>
 
@@ -174,7 +234,13 @@
       <span class="glyphicon glyphicon-chevron-right"></span>
       <span class="sr-only">Next</span>
     </a>
-  </div>
+  </div></div>
+ <div class="col-lg-4 col-md-12 about-right">
+							<h1 style="font-family: 'Alegreya', serif; color:white; text-align:center;"><br>Motto</h1>
+							<p align="justify" style="color:white;">
+							<br>	The sole purpose is to quality education accessible to underprivileged kids along with awareness and professional advice on health, hygiene and moral values. It provides free education, uniforms, books and eatables to these kids.
+							</p>
+						</div>
 </div>
 
 					
@@ -195,89 +261,43 @@
 						</div>
 					</div>
 				</div>
-			</section>
+			</section>-->
 			<!-- End about Area -->
 
 			<!-- Start team Area --> 
 			<section class="volunteer-area section-gap">
+			    <br><br><br>
 				<div class="container">
 					<div class="row d-flex justify-content-center">
 						<div class="col-md-8 pb-80 header-text">
-							<h1>Our Team</h1>
-							<p>
-								abcdefghfguypo;qjdsnk,uoj;hlgkyuszdxfg<br>
-								we57r68tiyghkbjlkjo[i079p68o57ir6eustdcgjvhkohi
-							</p>
+							<h1 style="font-family: 'Alegreya', serif; color:#292f40;">Our Team</h1>
 						</div>
 					</div>
 					<div class="row">
-						<div class="col-lg-3 col-md-3 vol-wrap">
+						<div class="col-lg-5 col-md-5 vol-wrap">
 							<div class="single-vol">
 								<div class="content">
-								    <a href="#" target="_blank">
 								      <div class="content-overlay"></div>
 								  		 <img class="content-image img-fluid d-block mx-auto" src="img/v1.jpg" alt="">
 								      	<div class="content-details fadeIn-bottom">
-								      		<h4>XYZ</h4>
-								      		<p>
-								      			DESIGNATION
-								      		</p>
+								      		<h4><b style="color:white;">Nikita Bansal</b></h4>
+								      		<p><H5 style="color:white;">
+								      			PROJECT OWNER
+								      		</H5></p>
 								      	</div>
-								    </a>
+								    
 								 </div>
 							</div>
 						</div>
-						<div class="col-lg-3 col-md-3 vol-wrap">
-							<div class="single-vol">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="img/v1.jpg" alt="">
-								      	<div class="content-details fadeIn-bottom">
-								      		<h4>XYZ</h4>
-								      		<p>
-								      			DESIGNATION
-								      		</p>
-								      	</div>
-								    </a>
-								 </div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 vol-wrap">
-							<div class="single-vol">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="img/v1.jpg" alt="">
-								      	<div class="content-details fadeIn-bottom">
-								      		<h4>XYZ</h4>
-								      		<p>
-								      			DESIGNATION
-								      		</p>
-								      	</div>
-								    </a>
-								 </div>
-							</div>
-						</div>
-						<div class="col-lg-3 col-md-3 vol-wrap">
-							<div class="single-vol">
-								<div class="content">
-								    <a href="#" target="_blank">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="img/v1.jpg" alt="">
-								      	<div class="content-details fadeIn-bottom">
-								      		<h4>XYZ</h4>
-								      		<p>
-								      			DESIGNATION
-								      		</p>
-								      	</div>
-								    </a>
-								 </div>
-							</div>
-						</div>
+                        <div class="col-lg-6 col-md-6 vol wrap">
+                            <p align="justify"> <b style="font-size:15px; color:#292f40;"><br>Nikita Bansal<br>Age: 47 yrs<br>Occupation: Housewife<br>
+	City: Dehradun, India<br>
 
+</b>As an effort to contribute my bit towards society I am tutoring about 30-35 such children every year at my home during afternoon without any charges for last seven years. With this effort their results have improved significantly. The children, who were failing in their classes and their parents were on the verge of withdrawing their names from school, are amongst the top 10 in their class. They are upbeat about studies and also there is noticeable change in their personality. Appreciating this significant improvement in children more and more such parents are willing to send their children for these make up classes. </p>
+                        </div>
 					</div>
 				</div>
+				<br><br><br><br>
 			</section>
 			<!-- End volunteer Area -->
 
@@ -287,21 +307,19 @@
 				<div class="overlay overlay-bg"></div>
 				<div class="container">
 					<div class="row d-flex justify-content-end">
-						<div class="col-lg-6 col-sm-12 pb-80 header-text" >
+						<div class="col-lg-3 col-sm-12 pb-80 header-text" ><br><br><br>
 							<h1>Donate Now</h1>
-							<p>
-								abcdefghijklmnopenjarstubwioudubcnsojm<br>
-							</p>
 						</div>
 					</div>
 							<form class="booking-form" id="myForm" action="donate.php">
 								 	<div class="row">
 								 		<div class="col-lg-12 d-flex flex-column style="">
 							 				<select name="type" class="app-select form-control" required>
-												<option data-display="What do you want to donate" style="background-color:#3E3F3E;">Full Fee for a Student</option>
-												<option value="1">Clothes</option>
-												<option value="2">Books</option>
-												<option value="3">Donation</option>
+												<option data-display="What do you want to donate" style="background-color:#3E3F3E;"></option>
+												<option value="2">Full Fee for a Student</option>
+												<option value="2">Clothes</option>
+												<option value="3">Books</option>
+												<option value="4">Donation</option>
 											</select>
 								
 										</div>
@@ -330,42 +348,42 @@
 										</div>
 										<div class="col-lg-6 d-flex flex-column" style="padding-left:60px;" id="account">
 											<h5 style="color:white; padding-top:30px;"> Bank Account Details</h5>
-											Indian Overseas Bank<br>
+											<p style="color:#C0C0C0;">Indian Overseas Bank<br>
 											Nehru Colony, Dehradun India<br>
 											Current A/C No-<br>
 											148901000009006<br>
-											IFSC- IOBA0001489<br>
+											IFSC- IOBA0001489<br></p>
 										</div>
 										<div class="col-lg-6 d-flex justify-content-end send-btn align-self-center" style="padding-right:60px;">
 											<button class="submit-btn primary-btn mt-20 text-uppercase ">donate<span class="lnr lnr-arrow-right"></span> </button>
 										</div>
 
 										<div class="alert-msg"></div>
-									</div>
+									</div><br><br><br>
 					  		</form>
 					</div>
 				</div>
 			</section>
 			<!-- End donate Area -->
-			<!-- start footer Area -->
+		<!-- start footer Area -->
 			<footer class="footer-area section-gap">
-				<div class="container">
+				<div class="container"><br><br><br><br>
 					<div class="row d-flex flex-column justify-content-center">
 						
 						<div class="footer-social" id="contact">
-							<p><h6>Navkiran Education $ Welfare Society</h6>
+							<p><h5>Navkiran Education & Welfare Society</h5>
 							C-118, Nehru Colony, Dehradun, India<br>
 							Ph. 0135-2677161<br>
 							email: <a href="navkiraneduindia@gmail.com" >navkiraneduindia@gmail.com</a><br>
 							<p>
 						</div>
-						<p class="footer-text m-0">
+						<p class="footer-text m-0" style="padding-bottom:-100px">
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 							Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="fa fa-heart-o" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
 							<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
 						</p>
 					</div>
-				</div>
+				</div><br><br><br><br>
 			</footer>
 			<!-- End footer Area -->
 
