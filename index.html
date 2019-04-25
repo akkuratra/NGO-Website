@@ -1,4 +1,4 @@
-	<!DOCTYPE html>
+<!DOCTYPE html>
 	<html lang="zxx" class="no-js">
 	<head>
 		<!-- Mobile Specific Meta -->
@@ -42,10 +42,8 @@
                    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
                    <script>
 window.onscroll = function() {myFunction()};
-
 var header = document.getElementById("myHeader");
 var sticky = header.offsetTop;
-
 function myFunction() {
   if (window.pageYOffset > sticky) {
     header.classList.add("sticky");
@@ -71,9 +69,9 @@ function myFunction() {
              .bs-example{
 	             margin: 20px;
                  }
-    .header {
+		   .header {
   padding: 10px 16px;
-  background: #555;
+  background: #292f40;
   color: #f1f1f1;
 }
      .content {
@@ -124,9 +122,10 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
-  background-color:#292f40;
+li a:hover{
+  color:#292f40;
 }
+
 </style>
 		</head>
 		<body>
@@ -137,14 +136,13 @@ li a:hover:not(.active) {
 <li class="list"><a href="#about">ABOUT US </a></li>
 <li class="list"><a href="events.html">EVENTS </a> </li>
 <li class="list"><a href="indexGallery.html">GALLERY </a> </li>
-<li class="list"><a class="active" href="#home">HOME </a></li>
+<li class="list"><a class="active" href="index.html">HOME </a></li>
 <li style="float:left" id="navleft"><img src="img\picture1.png" height="25" width="45" style="padding-left:10px;"/></li>
-<li style="float:left" id="navleft"><h4 style="font-family:'Alegreya',serif;">NAVKIRAN EDUCATION AND WELFARE SOCIETY</h4></li>
+<li style="float:left" id="navleft"><h4 style="font-family:'Alegreya',serif; color:#292f40;">NAVKIRAN EDUCATION AND WELFARE SOCIETY</h4></li>
 
 </ul>
 </div>
 			<!-- End Header Area -->
-	
 			<!-- start banner Area -->
 			<section class="banner-area relative" id="home" >
 				<div class="overlay overlay-bg"></div>
@@ -269,7 +267,7 @@ outline-offset: -13px;">
 			    <br><br><br>
 				<div class="container">
 					<div class="row d-flex justify-content-center">
-						<div class="col-md-8 pb-80 header-text">
+						<div class="col-md-8 pb-50 header-text">
 							<h1 style="font-family: 'Alegreya', serif; color:#292f40;">Our Team</h1>
 						</div>
 					</div>
@@ -341,7 +339,6 @@ outline-offset: -13px;">
 										</div>
 										<div class="col-sm-12"">
 											
-
 											<textarea class="form-control mt-20" name="address" placeholder="Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Address'" required=""STYLE="background-color:#3E3F3E; color:#dfdfe5;"></textarea>
 											
 											<textarea class="form-control mt-20" name="message" placeholder="Message" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Message'" STYLE="background-color:#3E3F3E; color:#dfdfe5;" required=""></textarea>
@@ -357,7 +354,6 @@ outline-offset: -13px;">
 										<div class="col-lg-6 d-flex justify-content-end send-btn align-self-center" style="padding-right:60px;">
 											<button class="submit-btn primary-btn mt-20 text-uppercase ">donate<span class="lnr lnr-arrow-right"></span> </button>
 										</div>
-
 										<div class="alert-msg"></div>
 									</div><br><br><br>
 					  		</form>
