@@ -22,10 +22,12 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+   <link href="http://fonts.googleapis.com/css?family=Roboto|Roboto+Condensed|Alegreya:700" rel="stylesheet" type="text/css" />
+		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 			<!--
 			CSS
 			============================================= -->
-			<link rel="stylesheet" href="css/linearicons.css">=
+			<link rel="stylesheet" href="css/linearicons.css">
 			<link rel="stylesheet" href="css/font-awesome.min.css">
 			<link rel="stylesheet" href="css/magnific-popup.css">
 			<link rel="stylesheet" href="css/nice-select.css">
@@ -33,45 +35,80 @@
 			<link rel="stylesheet" href="css/bootstrap.css">
 			<link rel="stylesheet" href="css/main.css">
 			<link href="http://fonts.googleapis.com/css?family=Dancing+Script:700|EB+Garamond" rel="stylesheet" type="text/css" />
+			<style>
+		   .header {
+  padding: 10px 16px;
+  background: #292f40;
+  color: #f1f1f1;
+}
+     .content {
+  padding: 16px;
+}
 
-	</head>
+.sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}        
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  position: sticky;
+  overflow: hidden;
+  background-color: #f5ab35;
+  position: none;
+  top: 0;
+  width: 100%;
+  border:5px;
+  font-weight:bold;
+  margin-top:0px;
+  margin-bottom:0px;
+}
+
+.list {
+  float: right;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 18px 18px;
+  text-decoration: none;
+}
+#navleft {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 18px 18px;
+  text-decoration: none;
+}
+
+li a:hover{
+  color:#292f40;
+}
+
+</style>
+		</head>
 		<body>
-			<header class="default-header">
-				<div class="container">
-					<div class="header-wrap">
-						<div class="header-top d-flex justify-content-between align-items-center">
-							<div class="logo">
-								<h4> Navkiran Education & Welfare Society</h4 >              
-								<!--
+		
+			<div class="header" id="myheader">
+<ul>
+<li class="list"><a href="#contact">CONTACT US </a></li>
+<li class="list"><a href="#about">ABOUT US </a></li>
+<li class="list"><a href="events.html">EVENTS </a> </li>
+<li class="list"><a href="indexGallery.html">GALLERY </a> </li>
+<li class="list"><a class="active" href="index.html">HOME </a></li>
+<li style="float:left" id="navleft"><img src="img\picture1.png" height="25" width="45" style="padding-left:10px;"/></li>
+<li style="float:left" id="navleft"><h4 style="font-family:'Alegreya',serif; color:#292f40;">NAVKIRAN EDUCATION AND WELFARE SOCIETY</h4></li>
 
-								
-								.......Add the logo here..... 
-								
-								
-								-->
-							</div>
-							<div class="main-menubar d-flex align-items-center">
-								<nav class="hide">
-									<a href="index.html">Home</a>
-									
-									<a class="dropdown-toggle" data-toggle="dropdown" href="#">Upcoming Events
-									<span class="caret"></span></a>
-									<ul class="dropdown-menu">
-									<li><a href="#">Sports</a></li>
-									<li><a href="#">Arts</a></li>
-									<li><a href="#">Health Camp</a></li>
-									<li><a href="#">Festival Celebration</a></li>
-									</ul>
-									<a href="index.html#about">About</a>
-									<a href="index.html#contact">Contact Us</a>
-									<a href="index.html#account">Bank Account Details</a>
-								</nav>
-								<div class="menu-bar"><span class="lnr lnr-menu"></span></div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</header>
+</ul>
+</div>
 			<!-- End Header Area -->
 
 		<!-- Gallery Grid -->
@@ -79,7 +116,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <h1 style="padding-top:30px; font-family:'Dancing Script',cursive;"><i>Gallery</i></h1>
+                    <h1 style="padding-top:30px; font-family:'Dancing Script',cursive;"><i style="color:#292f40; font-size:50px;">Gallery</i></h1>
                     <h3 class="section-subheading text-muted" style="padding-top:15px;font-family:'EB Garamond',cursive;">“A picture can tell a thousand words, but a few words can change it’s story.”</h3>
                 </div>
             </div>
@@ -91,7 +128,7 @@
                         <a href="carousel1.html"><img class="img-fluid" src="img/pexels4.jpeg" style="max-height:250px; max-width:350px; height:250px; width=350px;" alt=""></a>
                     </a>
                     <div class="portfolio-caption">
-                        <h3 align="center" style="padding-top:15px;font-family:'EB Garamond',serif;" >How We Started</h3>
+                        <h3 align="center" style="padding-top:15px;font-family:'EB Garamond',serif; color:#292f40; " >How We Started</h3>
                        
                     </div>
                 </div>
@@ -102,7 +139,7 @@
                         <a href="carousel2.html"><img class="img-fluid" src="img/pexels1.jpeg" style="max-height:250px; max-width:350px; height:250px; width=350px;" alt=""></a>
                     </a>
                     <div class="portfolio-caption">
-                        <h3 align="center" style="padding-top:15px;font-family:'EB Garamond',serif;" >Health Camp</h3>
+                        <h3 align="center" style="padding-top:15px;font-family:'EB Garamond',serif; color:#292f40;" >Health Camp</h3>
                        
                     </div>
                 </div>
@@ -113,7 +150,7 @@
                          <a href="carousel3.html"><img class="img-fluid" src="img/pexels2.jpeg" style="max-height:250px; max-width:350px; height:250px; width=350px;" alt=""></a>
                     </a>
                     <div class="portfolio-caption">
-                        <h3 align="center" style="padding-top:15px;font-family:'EB Garamond',serif;" >Festivals</h3>
+                        <h3 align="center" style="padding-top:15px;font-family:'EB Garamond',serif; color:#292f40;" >Festivals</h3>
                        
                     </div>
                 </div>
@@ -126,7 +163,7 @@
                          <a href="carousel4.html"><img class="img-fluid" src="img/pexels3.jpeg" style="max-height:250px; max-width:350px; height:250px; width=350px;" alt=""></a>
                     </a>
                     <div class="portfolio-caption">
-                        <h3 align="center" style="padding-top:15px;font-family:'EB Garamond',serif;" >Uniform</h3>
+                        <h3 align="center" style="padding-top:15px;font-family:'EB Garamond',serif; color:#292f40;" >Uniform</h3>
                        
                     </div>
                 </div>
