@@ -69,80 +69,106 @@ function myFunction() {
              .bs-example{
 	             margin: 20px;
                  }
-		   .header {
-  padding: 10px 16px;
-  background: #292f40;
-  color: #f1f1f1;
-}
-     .content {
-  padding: 16px;
-}
-
-.sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
+/*sticky header position*/
+.sticky.is-sticky {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+    width: 100%;
 }
 
-.sticky + .content {
-  padding-top: 102px;
-}        
-ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  position: sticky;
-  overflow: hidden;
-  background-color: #f5ab35;
-  position: none;
-  top: 0;
-  width: 100%;
-  border:5px;
-  font-weight:bold;
-  margin-top:0px;
-  margin-bottom:0px;
+body {
+  min-height: 1200px;
 }
-
-.list {
-  float: right;
+nav {
+  background: #f5ab35;
+  min-height: 85px;
+  box-shadow: 0 3px 6px -1px rgba(0,0,0,0.25);
 }
-
-li a {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 18px 18px;
-  text-decoration: none;
+a:hover{
+  color:#f5ab35;
+  background-color:#292f40;
+   border-radius: 5px;
 }
-#navleft {
-  display: block;
-  color: white;
-  text-align: center;
-  padding: 18px 18px;
-  text-decoration: none;
-}
-
-li a:hover{
-  color:#292f40;
-}
-
 </style>
+<script type="text/javascript">
+    
+
+// Sticky navbar
+// =========================
+            $(document).ready(function () {
+                // Custom function which toggles between sticky class (is-sticky)
+                var stickyToggle = function (sticky, stickyWrapper, scrollElement) {
+                    var stickyHeight = sticky.outerHeight();
+                    var stickyTop = stickyWrapper.offset().top;
+                    if (scrollElement.scrollTop() >= stickyTop) {
+                        stickyWrapper.height(stickyHeight);
+                        sticky.addClass("is-sticky");
+                    }
+                    else {
+                        sticky.removeClass("is-sticky");
+                        stickyWrapper.height('auto');
+                    }
+                };
+
+                // Find all data-toggle="sticky-onscroll" elements
+                $('[data-toggle="sticky-onscroll"]').each(function () {
+                    var sticky = $(this);
+                    var stickyWrapper = $('<div>').addClass('sticky-wrapper'); // insert hidden element to maintain actual top offset on page
+                    sticky.before(stickyWrapper);
+                    sticky.addClass('sticky');
+
+                    // Scroll & resize events
+                    $(window).on('scroll.sticky-onscroll resize.sticky-onscroll', function () {
+                        stickyToggle(sticky, stickyWrapper, $(this));
+                    });
+
+                    // On page load
+                    stickyToggle(sticky, stickyWrapper, $(window));
+                });
+            });
+</script>
 		</head>
 		<body>
-		
-			<div class="header" id="myheader">
-<ul>
-<li class="list"><a href="#contact">CONTACT US </a></li>
-<li class="list"><a href="#about">ABOUT US </a></li>
-<li class="list"><a href="events.html">EVENTS </a> </li>
-<li class="list"><a href="indexGallery.html">GALLERY </a> </li>
-<li class="list"><a class="active" href="index.html">HOME </a></li>
-<li style="float:left" id="navleft"><img src="img\picture1.png" height="25" width="45" style="padding-left:10px;"/></li>
-<li style="float:left" id="navleft"><h4 style="font-family:'Alegreya',serif; color:#292f40;">NAVKIRAN EDUCATION AND WELFARE SOCIETY</h4></li>
+		   <!--top header-->
+        <header >
+            <nav class="navbar  navbar-expand-lg navbar-light top-navbar" data-toggle="sticky-onscroll">
+                <div class="container" >
+                    <img class="navbar-brand" src="img\picture1.png" width="70px" style="padding-left:-9px;"/>
+                    <p class="navbar-brand" style="font-family:'Alegreya',serif; color:#292f40;font-size:20px;">Navkiran Education & Welfare Society </p>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
 
-</ul>
-</div>
-			<!-- End Header Area -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarSupportedContent">
+                        <ul class="navbar-nav pull-right">
+                            <li class="nav-item">
+                                <a class="nav-link active" style="color:white; font-weight:500;font-family:Poppins;font-size:15px;" href="#home">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:white; font-weight:500;font-family:Poppins;font-size:15px;" href="indexGallery.html">Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:white; font-weight:500;font-family:Poppins;font-size:15px;" href="events.html">Events</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:white; font-weight:500;font-family:Poppins;font-size:15px;" href="#about">About Us</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" style="color:white; font-weight:500;font-family:Poppins;font-size:15px;" href="#contact">Contact Us</a>
+                            </li>
+
+                        </ul>
+
+                    </div>
+                </div>
+            </nav>
+
+        </header>
+        <!-- End top header-->
+
 			<!-- start banner Area -->
 			<section class="banner-area relative" id="home" >
 				<div class="overlay overlay-bg"></div>
@@ -275,8 +301,8 @@ outline-offset: -13px;">
 						<div class="col-lg-5 col-md-5 vol-wrap">
 							<div class="single-vol">
 								<div class="content">
-								      <div class="content-overlay"></div>
-								  		 <img class="content-image img-fluid d-block mx-auto" src="img/v1.jpg" alt="">
+								      <div class="content-overlay" style="widows:200px;height:270px;"></div>
+								  		 <img class="content-image img-fluid d-block mx-auto" src="img/nikita.png" style="widows:200px;height:270px;" alt="">
 								      	<div class="content-details fadeIn-bottom">
 								      		<h4><b style="color:white;">Nikita Bansal</b></h4>
 								      		<p><H5 style="color:white;">
